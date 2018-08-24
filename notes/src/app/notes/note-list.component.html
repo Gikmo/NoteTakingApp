@@ -1,0 +1,10 @@
+<div class="list-group" *ngFor='let note of notes'>
+    <a [routerLink]="['/notes/edit', note.id]" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ note.title }}</h5>
+            <small>Updated {{ note.lastUpdated }}</small>
+        </div>
+        <p class="mb-1">{{ note.body }}</p>
+        <small>Created {{ note.createdAt }}</small>
+    </a>
+</div>
